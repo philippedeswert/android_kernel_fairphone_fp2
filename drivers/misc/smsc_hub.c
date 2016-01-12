@@ -177,7 +177,7 @@ static const struct i2c_device_id hsic_hub_id[] = {
 	{"i2c_hsic_hub", 0},
 	{}
 };
-MODULE_DEVICE_TABLE(i2c, hsichub_id);
+MODULE_DEVICE_TABLE(i2c, hsic_hub_id);
 
 static struct i2c_driver hsic_hub_driver = {
 	.driver = {
