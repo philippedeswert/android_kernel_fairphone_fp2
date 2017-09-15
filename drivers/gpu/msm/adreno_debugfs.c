@@ -41,6 +41,7 @@ typedef void (*reg_read_init_t)(struct kgsl_device *device);
 typedef void (*reg_read_fill_t)(struct kgsl_device *device, int i,
 	unsigned int *vals, int linec);
 
+#ifdef DEBUG_FS
 void adreno_debugfs_init(struct kgsl_device *device)
 {
 	struct adreno_device *adreno_dev = ADRENO_DEVICE(device);
@@ -57,3 +58,4 @@ void adreno_debugfs_init(struct kgsl_device *device)
 	debugfs_create_file("active_cnt", 0444, device->d_debugfs, device,
 			    &_active_count_fops);
 }
+#endif
